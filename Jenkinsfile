@@ -7,6 +7,8 @@ pipeline {
                 bat '''
                 echo Build stage
                 "C:\\Users\\LENOVO\\AppData\\Local\\Programs\\Python\\Python311\\python.exe" --version
+                "C:\\Users\\LENOVO\\AppData\\Local\\Programs\\Python\\Python311\\python.exe" -m pip install --upgrade pip
+                "C:\\Users\\LENOVO\\AppData\\Local\\Programs\\Python\\Python311\\python.exe" -m pip install pytest numpy pandas scikit-learn
                 '''
             }
         }
