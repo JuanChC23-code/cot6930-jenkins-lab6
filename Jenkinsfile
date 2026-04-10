@@ -7,7 +7,7 @@ pipeline {
                 bat '''
                 echo In C or Java, we can compile our program in this step
                 echo In Python, we can build our package here or skip this step
-                py --version
+                python --version
                 '''
             }
         }
@@ -16,7 +16,7 @@ pipeline {
             steps {
                 bat '''
                 echo Test Step: We run testing tool like pytest here
-                py -m pytest
+                python -m pytest
                 '''
             }
         }
