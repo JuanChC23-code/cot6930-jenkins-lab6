@@ -5,9 +5,8 @@ pipeline {
         stage('Build') {
             steps {
                 bat '''
-                echo In C or Java, we can compile our program in this step
-                echo In Python, we can build our package here or skip this step
-                python --version
+                echo Build stage
+                "C:\\Users\\LENOVO\\AppData\\Local\\Programs\\Python\\Python311\\python.exe" --version
                 '''
             }
         }
@@ -15,8 +14,8 @@ pipeline {
         stage('Test') {
             steps {
                 bat '''
-                echo Test Step: We run testing tool like pytest here
-                python -m pytest
+                echo Running pytest
+                "C:\\Users\\LENOVO\\AppData\\Local\\Programs\\Python\\Python311\\python.exe" -m pytest
                 '''
             }
         }
@@ -24,8 +23,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 bat '''
-                echo In this step, we deploy our project
-                echo Depending on the context, we may publish the project artifact or upload pickle files
+                echo Deploy stage completed
                 '''
             }
         }
